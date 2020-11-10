@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>B1 Soluzioni</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+	<script>
+		socket = io();
+		let username;
+		let password;
+		while (true) {
+			username = prompt('Nome Utente', 'nomeutente');
+			if(username != null) break;
+		}
+		while (true) {
+			password = prompt('Password', 'password');			
+			if(password != null) break;
+		}
+		socket.emit('verificationb1', {username, password});
+
+		socket.on('ok', (html) => {
+			document.write(html);
+		});
+		socket.on('fail', () => {
+			document.write('<h1>Utente non Trovato, ricaricare la pagina</h1>');
+		});
+	</script>
+</body>
+
+</html>
