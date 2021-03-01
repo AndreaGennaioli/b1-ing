@@ -1,5 +1,5 @@
 # b1-ing
 
-Un semplice sito che potete trovare a http://b1-ing.herokuapp.com/ e che ho creato solo per passare il tempo, praticamente te inserisci il numero della pagina e lui ti dà le soluzioni di un libro di inglese che utilizziamo in classe.
+A simple site that you can find at http://b1-ing.herokuapp.com/ and that I created just to pass the time, basically you enter the page number and he gives you the solutions of an English book that we use in class.
 
-Attualmente ho deciso di rendere private le pagine con i risultati inserendo un piccolo sistema di login.
+Currently I have decided to make the results pages private by inserting a small login system.
